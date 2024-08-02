@@ -1,0 +1,23 @@
+const API_KEY = 'f26141a8'; // Replace with your OMDb API key
+const BASE_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=f26141a8';
+
+async function fetchMovies(query) {
+    const response = await fetch(`${BASE_URL}?s=${query}&apikey=${API_KEY}`);
+    const data = await response.json();
+    return data.Search || [];
+}
+
+async function searchMovies(query) {
+    const movies = await fetchMovies(query);
+    renderMovies(movies);
+}
+
+// Adjust the search event listener
+searchBar.addEventListener("input", async () => {
+    const query = searchBar.value;
+    if (query.length > 2) {
+        await searchMovies(query);
+    } else {
+        renderMovies([]);
+    }
+});

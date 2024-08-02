@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #a2faff;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+input#searchBar {
+    width: 80%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+#movieList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.movie-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: calc(33% - 2rem);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#movieDetails {
+    background: #f9f9f9;
+    padding: 1rem;
+}
+
+#backButton {
+    margin-bottom: 1rem;
+}
+
+.movie-image {
+    width: 150px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Styles for movie image in details view */
+.movie-image-large {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
